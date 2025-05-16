@@ -10,7 +10,6 @@
     align-items: center;
     z-index: 1000;
     box-shadow: 0 2px 12px rgba(160, 83, 225, 0.05);
-
 }
 
 .logo {
@@ -20,6 +19,15 @@
     letter-spacing: 1px;
 }
 
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: #f9e0f0;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+/* Masaüstü menü */
 .nav-links {
     list-style: none;
     display: flex;
@@ -55,42 +63,12 @@
     background-color: #a053e1;
     border-radius: 15px;
     padding: 10px;
-
 }
 
-/* Responsive (isteğe bağlı hamburger menü yapılabilir) */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    z-index: 1100;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: #f3d1e8;
-    margin: 4px 0;
-    transition: 0.4s;
-    border-radius: 2px;
-}
-
-/* Hamburger animasyon efekti */
-.bar.open:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-.bar.open:nth-child(2) {
-    opacity: 0;
-}
-.bar.open:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-}
-
-/* Mobil */
+/* Mobil Görünüm */
 @media screen and (max-width: 768px) {
-    .navbar {
-        flex-direction: row;
-        justify-content: space-between;
+    .hamburger {
+        display: block;
     }
 
     .nav-links {
@@ -117,13 +95,6 @@
         font-weight: bold;
         font-size: 1.1rem;
         transition: background 0.3s ease, color 0.3s ease;
-    }
-
-    .nav-links li a:hover {
-        background-color: rgba(160, 83, 225, 0.3);
-        padding: 8px;
-        border-radius: 10px;
-        color: #f3d1e8;
     }
 
     .navbar.active .nav-links {

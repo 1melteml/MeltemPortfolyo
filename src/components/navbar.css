@@ -1,0 +1,77 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(160, 83, 225, 0.05);
+
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #f9e0f0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    color: #f3d1e8;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -3px;
+    background: linear-gradient(to right, #c084fc, #f472b6);
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+.nav-links li a:hover {
+    color: #fff;
+    background-color: #a053e1;
+    border-radius: 15px;
+    padding: 10px;
+
+}
+
+/* Responsive (isteğe bağlı hamburger menü yapılabilir) */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: rgba(255, 255, 255, 0.07);
+        backdrop-filter: blur(12px);
+        padding: 1rem 2rem;
+        display: none;
+    }
+
+    .navbar.active .nav-links {
+        display: flex;
+    }
+}

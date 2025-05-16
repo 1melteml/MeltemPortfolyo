@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
+import Navbar from './components/navbar';
+import Hero from './components/hero';
+import About from './components/about';
+import Skills from './components/skills';
+import Portfolio from './components/portfolio';
+import Contact from './components/contact';
+import Footer from './components/footer';
+import Sociallinks from './components/sociallinks'; // Bu satır eksikti
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="app-container">
+            <Navbar />
+            <Hero />
+            <About />
+            <Skills />
+            <Portfolio />
+            <Contact />
+            <Sociallinks />
+            <Footer />
+        </div>
+    );
 }
 
 export default App;

@@ -1,0 +1,44 @@
+.hero {
+    padding: 14em 2rem;
+    text-align: center;
+    color: #fff;
+    background-image: url('/arkaplan.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+
+}
+
+.animated-title {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.animated-title span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.6s forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Alt yazı */
+.hero-subtext {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #f8e8f0;
+    opacity: 0.9;
+}

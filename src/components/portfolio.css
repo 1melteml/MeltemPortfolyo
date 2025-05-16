@@ -1,0 +1,104 @@
+.portfolio {
+    padding: 6rem 2rem;
+    text-align: center;
+    margin: 0 auto;
+    background-image: url('/arkaplan2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.portfolio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: #933a1a;
+    text-align: center; /* yazıyı yatayda ortalar */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+    overflow: hidden;
+    border-right: 2px solid #f472b6;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 3s steps(15, end) forwards, blink 0.75s step-end infinite;
+}
+
+
+.portfolio h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    margin: 0.5rem auto 0;
+    background: linear-gradient(to right, #f7c6d9, #d6a8f1);
+    border-radius: 4px;
+}
+
+.portfolio-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.portfolio-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(160, 83, 225, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.portfolio-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 28px rgba(160, 83, 225, 0.2);
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.portfolio-info {
+    padding: 1.5rem;
+    color: #fff;
+}
+
+.portfolio-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #ffebf2;
+}
+
+.portfolio-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #f8e8f0;
+}
+
+.portfolio-info a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(to right, #c084fc, #f472b6);
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.portfolio-info a:hover {
+    background: linear-gradient(to right, #a855f7, #ec4899);
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 14ch } /* "Portfolyo" uzunluğuna göre ayarla */
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
+}

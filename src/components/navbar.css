@@ -88,28 +88,45 @@
 
 /* Mobil */
 @media screen and (max-width: 768px) {
-    .hamburger {
-        display: flex;
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .nav-links {
+        flex-direction: column;
         position: absolute;
         top: 70px;
-        right: 0;
-        background: rgba(255, 255, 255, 0.07);
+        right: 1rem;
+        background: rgba(255, 255, 255, 0.12);
         backdrop-filter: blur(12px);
-        flex-direction: column;
-        width: 100%;
         padding: 1rem 2rem;
         display: none;
-    }
-
-    .nav-links.active {
-        display: flex;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        width: 200px;
+        text-align: right;
     }
 
     .nav-links li {
-        margin: 0.8rem 0;
-        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    .nav-links li a {
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.1rem;
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+        background-color: rgba(160, 83, 225, 0.3);
+        padding: 8px;
+        border-radius: 10px;
+        color: #f3d1e8;
+    }
+
+    .navbar.active .nav-links {
+        display: flex;
     }
 }

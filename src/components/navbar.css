@@ -59,19 +59,47 @@
 }
 
 /* Responsive (isteğe bağlı hamburger menü yapılabilir) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #f3d1e8;
+    margin: 4px 0;
+    transition: 0.4s;
+    border-radius: 2px;
+}
+
+/* Hamburger animasyon efekti */
+.bar.open:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.bar.open:nth-child(2) {
+    opacity: 0;
+}
+.bar.open:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobil */
 @media screen and (max-width: 768px) {
     .hamburger {
-        display: block;
+        display: flex;
     }
 
     .nav-links {
-        flex-direction: column;
         position: absolute;
-        top: 100%;
+        top: 70px;
         right: 0;
-        width: 200px;
         background: rgba(255, 255, 255, 0.07);
         backdrop-filter: blur(12px);
+        flex-direction: column;
+        width: 100%;
         padding: 1rem 2rem;
         display: none;
     }
@@ -81,7 +109,7 @@
     }
 
     .nav-links li {
-        margin-bottom: 1rem;
+        margin: 0.8rem 0;
+        text-align: center;
     }
-
 }

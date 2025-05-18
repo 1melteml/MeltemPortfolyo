@@ -3,7 +3,7 @@
     margin: 0 auto;
     text-align: center;
     animation: fadeIn 1.2s ease-in;
-    background-image: url('/arkaplan2.jpg');
+    background-color: #12192C; /* Yeni koyu arkaplan */
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -16,7 +16,7 @@
 .skills-title {
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #fff;
+    color: #e5e8ff; /* Açık ve okunabilir başlık */
     position: relative;
 }
 
@@ -24,7 +24,7 @@
     content: '';
     width: 60px;
     height: 4px;
-    background: linear-gradient(to right, #f472b6, #c084fc);
+    background: linear-gradient(to right, #a781f5, #c084fc);
     position: absolute;
     bottom: -12px;
     left: 50%;
@@ -40,11 +40,11 @@
 }
 
 .skill-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.06); /* Hafif transparan kartlar */
     backdrop-filter: blur(12px);
     border-radius: 20px;
     padding: 2rem;
-    color: #fdf6fd;
+    color: #f0eafd;
     transition: all 0.4s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 20px rgba(197, 130, 255, 0.12);
@@ -62,6 +62,7 @@
     margin-bottom: 1rem;
     display: inline-block;
     animation: pulse 2s infinite ease-in-out;
+    color: #dbb3ff; /* Ikonik renk */
 }
 
 @keyframes pulse {
@@ -72,6 +73,7 @@
 .skill-card h3 {
     font-size: 1.4rem;
     margin-bottom: 0.5rem;
+    color: #e8dcff; /* Başlıklar için pastel mor */
 }
 
 .skill-card p {
@@ -79,6 +81,7 @@
     opacity: 0.9;
     color: #f9d9f7;
 }
+
 .animated-title span {
     display: inline-block;
     opacity: 0;
@@ -92,4 +95,3 @@
         transform: translateY(0);
     }
 }
-

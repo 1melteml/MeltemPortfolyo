@@ -1,11 +1,10 @@
 .about-section {
     padding: 8rem 2rem;
-    color: #fce4ec;
-
+    color: #f0f0f5; /* Açık renk, koyu zeminde okunabilir */
     text-align: center;
     animation: fadeIn 1.2s ease forwards;
     opacity: 0;
-    background-image: url('/arkaplan2.jpg');
+    background-color: #12192C; /* Koyu gece mavisi */
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -21,7 +20,7 @@
     margin-bottom: 3rem;
     position: relative;
     display: inline-block;
-    color: #fff;
+    color: #e0e0ff; /* Açık ton başlık için */
 }
 
 .section-title::after {
@@ -31,7 +30,7 @@
     bottom: -8px;
     width: 100%;
     height: 3px;
-    background: linear-gradient(to right, #f472b6, #c084fc);
+    background: linear-gradient(to right, #a781f5, #c084fc);
     border-radius: 2px;
 }
 
@@ -41,11 +40,11 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(18, 25, 44, 0.8); /* Daha koyu, şeffaf arka plan */
     border-radius: 20px;
     padding: 2rem;
     backdrop-filter: blur(12px);
-    box-shadow: 0 8px 24px rgba(160, 83, 225, 0.1);
+    box-shadow: 0 8px 24px rgba(100, 90, 180, 0.4);
     transition: transform 0.3s ease;
 }
 
@@ -58,15 +57,15 @@
     height: 240px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #f9d6f7;
-    box-shadow: 0 4px 16px rgba(255, 192, 203, 0.3);
+    border: 4px solid #a49dfd; /* Açık morumsu sınır */
+    box-shadow: 0 4px 16px rgba(164, 157, 253, 0.5);
 }
 
 .about-text {
     max-width: 600px;
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #f8e8f0;
+    color: #d6d9f8; /* Açık, göz yormayan yazı rengi */
     text-align: left;
 }
 

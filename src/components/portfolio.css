@@ -2,28 +2,26 @@
     padding: 6rem 2rem;
     text-align: center;
     margin: 0 auto;
-    background-image: url('/arkaplan2.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: #12192C; /* Koyu gece mavisi arkaplan */
+
 }
 
 .portfolio h2 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #fff;
+    color: #e5e8ff;
     text-decoration: underline;
-    text-decoration-color: #933a1a;
-    text-align: center; /* yazıyı yatayda ortalar */
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-
-    overflow: hidden;
-    border-right: 2px solid #f472b6;
+    text-decoration-color: #a781f5;
+    display: inline-block;
+    border-right: 2px solid #a781f5;
     white-space: nowrap;
-    width: 0;
+    overflow: hidden;
     animation: typing 3s steps(15, end) forwards, blink 0.75s step-end infinite;
+
+    margin-left: auto;
+    margin-right: auto; /* Bu satırlar ortalamayı sağlar */
 }
+
 
 
 .portfolio h2::after {
@@ -32,7 +30,7 @@
     width: 80px;
     height: 4px;
     margin: 0.5rem auto 0;
-    background: linear-gradient(to right, #f7c6d9, #d6a8f1);
+    background: linear-gradient(to right, #a781f5, #c084fc);
     border-radius: 4px;
 }
 
@@ -43,10 +41,10 @@
 }
 
 .portfolio-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.06); /* Hafif transparan kart arkaplanı */
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(160, 83, 225, 0.1);
+    box-shadow: 0 8px 24px rgba(160, 83, 225, 0.15);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     backdrop-filter: blur(8px);
@@ -54,7 +52,7 @@
 
 .portfolio-card:hover {
     transform: scale(1.03);
-    box-shadow: 0 12px 28px rgba(160, 83, 225, 0.2);
+    box-shadow: 0 12px 28px rgba(160, 83, 225, 0.25);
 }
 
 .portfolio-card img {
@@ -65,13 +63,13 @@
 
 .portfolio-info {
     padding: 1.5rem;
-    color: #fff;
+    color: #f0eafd;
 }
 
 .portfolio-info h3 {
     font-size: 1.4rem;
     margin-bottom: 0.5rem;
-    color: #ffebf2;
+    color: #e8dcff; /* Kart başlığı için pastel mor */
 }
 
 .portfolio-info p {
@@ -84,7 +82,7 @@
 .portfolio-info a {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: linear-gradient(to right, #c084fc, #f472b6);
+    background: linear-gradient(to right, #c084fc, #a781f5);
     color: #fff;
     border-radius: 8px;
     font-weight: 500;
@@ -94,9 +92,10 @@
 .portfolio-info a:hover {
     background: linear-gradient(to right, #a855f7, #ec4899);
 }
+
 @keyframes typing {
     from { width: 0 }
-    to { width: 14ch } /* "Portfolyo" uzunluğuna göre ayarla */
+    to { width: 14ch } /* "Portfolyo" uzunluğuna göre ayarlanmış */
 }
 
 @keyframes blink {

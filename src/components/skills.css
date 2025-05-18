@@ -50,6 +50,10 @@
     box-shadow: 0 8px 20px rgba(197, 130, 255, 0.12);
     position: relative;
     overflow: hidden;
+    display: flex; /* İkon ve metinleri hizalamak için flexbox kullanabilirsiniz */
+    flex-direction: column; /* Öğeleri dikey olarak sırala */
+    align-items: center; /* Yatayda ortala */
+    text-align: center; /* Metni de ortala */
 }
 
 .skill-card:hover {
@@ -57,12 +61,23 @@
     box-shadow: 0 16px 30px rgba(245, 158, 255, 0.25);
 }
 
+.skill-image {
+    width: 40px; /* İstediğiniz ikon genişliği */
+    height: 40px; /* İstediğiniz ikon yüksekliği */
+    object-fit: contain; /* İkonun orantılı şekilde sığmasını sağlar */
+    margin-bottom: 0.5rem; /* İkon ile yazı arasında boşluk bırakır */
+}
 .skill-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    /* Mevcut stil tanımlamalarınız */
+    margin-bottom: 0.5rem;
     display: inline-block;
     animation: pulse 2s infinite ease-in-out;
-    color: #dbb3ff; /* Ikonik renk */
+    color: #dbb3ff; /* İkonik renk */
+
+    /* Yeni ekleyeceğiniz boyutlandırma özellikleri */
+    width: 10px; /* İstediğiniz genişlik */
+    height: 10px; /* İstediğiniz yükseklik */
+    object-fit: contain; /* İkonun orantılı bir şekilde kutuya sığmasını sağlar */
 }
 
 @keyframes pulse {
@@ -95,3 +110,4 @@
         transform: translateY(0);
     }
 }
+

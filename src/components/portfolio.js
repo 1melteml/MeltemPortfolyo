@@ -4,22 +4,22 @@ import './portfolio.css';
 const Portfolio = () => {
     const projects = [
         {
-            title: "Kişisel Blog",
-            description: "React ile geliştirilen responsive blog sitesi.",
-            image: "/images/blog.png", // public klasöründe olmalı
-            link: "#"
+            title: "Word Benzeri Uygulama",
+            description: "QT DESİGNER'da çizimi yapılıp entegre edilmiş word uygulaması",
+            image: "/arkaplan3.jpg", // public klasöründe olmalı
+            link: "https://github.com/1melteml/WordUygulamasi"
         },
         {
-            title: "Film API Uygulaması",
-            description: "OMDB API kullanılarak yapılmış arama uygulaması.",
-            image: "/images/movieapp.png",
-            link: "#"
+            title: "Soru Bankası",
+            description: "Python kullanılarak oluşturulmuş soru bankası uygulaması",
+            image: "/arkaplan3.jpg",
+            link: "https://github.com/1melteml/SoruBankasi"
         },
         {
-            title: "Hava Durumu App",
-            description: "OpenWeather API ile anlık hava durumu gösterimi.",
-            image: "/images/weather.png",
-            link: "#"
+            title: "Yurtdışı Vize Randevu Uygulaması",
+            description: "Python kullanılarak oluşturulmuş vize randevusu uygulaması",
+            image: "/VizeRandevu.png",
+            link: "https://github.com/1melteml/VizeUygulamasi"
         }
     ];
 

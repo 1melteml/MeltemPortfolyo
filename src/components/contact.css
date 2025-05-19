@@ -80,7 +80,7 @@
 }
 
 .contact-form button:hover {
-    background: linear-gradient(to right, #6c0ddf, #f40765);
+    background: linear-gradient(to right, #6c0ddf, #ec4899);
 }
 
 @keyframes titlePop {

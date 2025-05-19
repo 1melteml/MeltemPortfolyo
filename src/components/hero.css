@@ -13,8 +13,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
+/* Başlık */
 .animated-title {
     font-size: 3rem;
     font-weight: bold;
@@ -22,12 +24,26 @@
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
+    position: relative;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.animated-title.animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .animated-title span {
     display: inline-block;
     opacity: 0;
     transform: translateY(20px);
+    animation: fadeUp 0.6s forwards;
+}
+
+.animated-title.animate span {
     animation: fadeUp 0.6s forwards;
 }
 
@@ -38,6 +54,7 @@
     }
 }
 
+/* Alt metin */
 .hero-subtext {
     margin-top: 1rem;
     font-size: 1.2rem;
@@ -45,10 +62,78 @@
     opacity: 0.9;
     max-width: 600px;
     padding: 0 1rem;
+    position: relative;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hero-subtext.animate-subtext {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 40px;
+    border: 2px solid #c084fc;
+    border-radius: 12px;
+    box-sizing: border-box;
+    opacity: 0.75;
+    animation: scrollBounce 2s infinite;
+    z-index: 10;
+}
+
+.scroll-indicator::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background: #c084fc;
+    border-radius: 50%;
+    animation: scrollDot 2s infinite;
+}
+
+@keyframes scrollBounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(10px); }
+}
+
+@keyframes scrollDot {
+    0%, 100% { opacity: 1; transform: translateY(0); }
+    50% { opacity: 0.3; transform: translateY(6px); }
+}
+
+/* Kaydırma yazısı */
+.scroll-text {
+    position: absolute;
+    bottom: 0.7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.85rem;
+    color: #c084fc;
+    opacity: 0.6;
+    font-weight: 600;
+    user-select: none;
+    animation: scrollTextFade 2s infinite;
+    z-index: 10;
+}
+
+@keyframes scrollTextFade {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 0.15; }
 }
 
 /* Responsive */
-
 @media screen and (max-width: 768px) {
     .hero {
         padding: 8em 1.5rem;
@@ -66,14 +151,73 @@
         font-size: 1rem;
     }
 }
-.animated-title span {
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(20px);
-    /* animasyon sadece animate sınıfında */
+
+/* --- Butonlar ve eklemeler --- */
+
+.hero-button-group {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    z-index: 10;
+    position: relative;
 }
 
-.animated-title.animate span {
-    animation: fadeUp 0.6s forwards;
+.hero-cta-multiple {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(45deg, #c084fc, #ec4899);
+    color: white;
+    box-shadow: 0 3px 10px rgba(196, 132, 252, 0.5);
+    transition: background 0.3s ease, transform 0.2s ease;
+    white-space: nowrap;
+    min-width: 90px;
+}
+
+.hero-cta-multiple:hover {
+    background: linear-gradient(45deg, #7b00ff, #ec4899);
+    transform: scale(1.05);
+}
+
+.hero-cta-more {
+    margin-top: 1.8rem;
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(45deg, #c084fc, #f472b6);
+    color: white;
+    box-shadow: 0 4px 15px rgba(196, 132, 252, 0.6);
+    transition: background 0.3s ease;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-cta-more:hover {
+    background: linear-gradient(45deg, #7b00ff, #ec4899);
+}
+
+/* Responsive için küçültme */
+
+@media screen and (max-width: 768px) {
+    .hero-button-group {
+        gap: 0.7rem;
+    }
+    .hero-cta-multiple {
+        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
+        min-width: 70px;
+    }
+    .hero-cta-more {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.5rem;
+    }
 }
 

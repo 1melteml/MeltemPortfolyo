@@ -40,10 +40,10 @@ const About = () => {
                 </div>
                 <div className="about-text">
                     <p>
-                        Merhaba! Ben Meltem. Frontend geliştirme ve yaratıcı pastel tasarımlara tutkuyla bağlıyım.
+                        Merhaba! Ben Meltem. 29 Temmuz 2005 tarihinde Balıkesir'de doğdum. Balıkesir Üniversitesi Bilgisayar Mühendisliği 2. sınıf öğrencisiyim. Frontend geliştirme ve yaratıcı tasarımlara ilgim var.
                     </p>
                     <p>
-                        HTML, CSS, JavaScript ve React.js ile çalışıyorum. Boş zamanlarımda dijital çizimler yapar ve kahve eşliğinde kod yazarım ☕💻
+                        Yazılım dünyasında problem çözmeyi ve yenilikçi çözümler üretmeyi seviyorum. Frontend teknolojileri başta olmak üzere; React, JavaScript, HTML ve CSS ile kullanıcı dostu, estetik arayüzler tasarlıyorum. Aynı zamanda backend ve veritabanı konularına da ilgi duyuyorum ve sürekli kendimi geliştirmeye devam ediyorum.
                     </p>
                 </div>
             </div>

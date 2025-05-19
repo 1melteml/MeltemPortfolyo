@@ -4,25 +4,25 @@ import './portfolio.css';
 const Portfolio = () => {
     const projects = [
         {
-            title: "Word Benzeri Uygulama",
+            title: "Kelime İşlemci Uygulaması",
             description: "QT DESİGNER'da çizimi yapılıp entegre edilmiş word uygulaması",
             image: "/WordBenzeri.jpeg", // public klasöründe olmalı
             link: "https://github.com/1melteml/WordUygulamasi"
         },
         {
-            title: "Soru Bankası",
+            title: "Soru Bankası Uygulaması",
             description: "Python kullanılarak oluşturulmuş soru bankası uygulaması",
             image: "/SoruBankasi.jpeg",
             link: "https://github.com/1melteml/SoruBankasi"
         },
         {
-            title: "Yurtdışı Vize Randevu Uygulaması",
+            title: "Vize Randevusu Alma Uygulaması",
             description: "Python kullanılarak oluşturulmuş vize randevusu uygulaması",
             image: "/VizeRandevu.png",
             link: "https://github.com/1melteml/VizeUygulamasi"
         },
         {
-            title: "Tarım Aracı",
+            title: "Hareketli Tarım Aracı Uygulaması",
             description: "Arduino kullanılarak oluşturulan hareketli tarım aracı",
             image: "/TarımAraci2.jpeg",
             link: "https://github.com/1melteml/Arduino"

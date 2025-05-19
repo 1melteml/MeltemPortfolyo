@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './about.css';
 
 const About = () => {
+
+    useEffect(() => {
+        const title = document.querySelector('.section-title');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        if (title) observer.observe(title);
+
+        return () => {
+            if (title) observer.unobserve(title);
+        };
+    }, []);
+
     return (
         <section id="about" className="about-section">
             <h2 className="section-title">Ben Kimim?</h2>

@@ -9,12 +9,6 @@ const Sociallinks = () => {
                 <a href="https://github.com/1melteml" target="_blank" rel="noreferrer" aria-label="GitHub">
                     <FaGithub />
                 </a>
-                <a href="https://twitter.com/" target="_blank" rel="noreferrer" aria-label="Twitter">
-                    <FaXTwitter />
-                </a>
-                <a href="https://facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook">
-                    <FaFacebook />
-                </a>
             </div>
         </section>
     );

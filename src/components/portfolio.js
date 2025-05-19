@@ -6,13 +6,13 @@ const Portfolio = () => {
         {
             title: "Word Benzeri Uygulama",
             description: "QT DESİGNER'da çizimi yapılıp entegre edilmiş word uygulaması",
-            image: "/arkaplan3.jpg", // public klasöründe olmalı
+            image: "/WordBenzeri.jpeg", // public klasöründe olmalı
             link: "https://github.com/1melteml/WordUygulamasi"
         },
         {
             title: "Soru Bankası",
             description: "Python kullanılarak oluşturulmuş soru bankası uygulaması",
-            image: "/arkaplan3.jpg",
+            image: "/SoruBankasi.jpeg",
             link: "https://github.com/1melteml/SoruBankasi"
         },
         {
@@ -20,6 +20,12 @@ const Portfolio = () => {
             description: "Python kullanılarak oluşturulmuş vize randevusu uygulaması",
             image: "/VizeRandevu.png",
             link: "https://github.com/1melteml/VizeUygulamasi"
+        },
+        {
+            title: "Tarım Aracı",
+            description: "Arduino kullanılarak oluşturulan hareketli tarım aracı",
+            image: "/TarımAraci2.jpeg",
+            link: "https://github.com/1melteml/Arduino"
         }
     ];
 

@@ -4,7 +4,7 @@ import './about.css';
 const About = () => {
 
     useEffect(() => {
-        const title = document.querySelector('.section-title');
+        const options = { threshold: 0.6 };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -14,12 +14,20 @@ const About = () => {
                     entry.target.classList.remove('visible');
                 }
             });
-        }, { threshold: 0.6 });
+        }, options);
 
+        // Başlığı gözlemle
+        const title = document.querySelector('.section-title');
         if (title) observer.observe(title);
 
+        // Paragrafları gözlemle
+        const paragraphs = document.querySelectorAll('.about-text p');
+        paragraphs.forEach(p => observer.observe(p));
+
+        // Cleanup
         return () => {
             if (title) observer.unobserve(title);
+            paragraphs.forEach(p => observer.unobserve(p));
         };
     }, []);
 

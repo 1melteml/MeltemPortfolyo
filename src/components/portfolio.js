@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './portfolio.css';
 
 const Portfolio = () => {
@@ -29,9 +29,40 @@ const Portfolio = () => {
         }
     ];
 
+    const titleRef = useRef(null);
+
+    useEffect(() => {
+        const titleEl = titleRef.current;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Animasyonu sıfırla ve tekrar başlat
+                        titleEl.style.animation = 'none';
+                        // Tarayıcıya stil değişikliğini fark ettirip yeniden animasyon başlatma
+                        void titleEl.offsetWidth;
+                        titleEl.style.animation = '';
+                    }
+                });
+            },
+            { threshold: 0.1 } // %10 göründüğünde tetiklesin
+        );
+
+        if (titleEl) {
+            observer.observe(titleEl);
+        }
+
+        return () => {
+            if (titleEl) {
+                observer.unobserve(titleEl);
+            }
+        };
+    }, []);
+
     return (
         <section id="portfolio" className="portfolio">
-            <h2>Portfolyo</h2>
+            <h2 ref={titleRef}>Portfolyo</h2>
             <div className="portfolio-grid">
                 {projects.map((project, index) => (
                     <div className="portfolio-card" key={index}>

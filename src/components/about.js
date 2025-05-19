@@ -10,9 +10,11 @@ const About = () => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
                 }
             });
-        }, { threshold: 0.5 });
+        }, { threshold: 0.6 });
 
         if (title) observer.observe(title);
 
@@ -30,7 +32,7 @@ const About = () => {
                 </div>
                 <div className="about-text">
                     <p>
-                        Merhaba! Ben Meltem. Frontend geliştirme ve yaratıcı pastel tasarımlara tutkuyla bağlıyım. Kullanıcı odaklı ve görsel olarak etkileyici arayüzler oluşturmayı seviyorum.
+                        Merhaba! Ben Meltem. Frontend geliştirme ve yaratıcı pastel tasarımlara tutkuyla bağlıyım.
                     </p>
                     <p>
                         HTML, CSS, JavaScript ve React.js ile çalışıyorum. Boş zamanlarımda dijital çizimler yapar ve kahve eşliğinde kod yazarım ☕💻

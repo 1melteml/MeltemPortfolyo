@@ -84,15 +84,15 @@
         text-align: center;
     }
 }
-/* Scroll ile tetiklenecek animasyon */
 .section-title {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease-out;
+    transform: translateY(40px) scale(0.95);
+    transition: all 0.6s ease;
 }
 
 .section-title.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
 }
+
 

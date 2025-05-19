@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './skills.css';
 
 const skills = [
@@ -12,11 +12,41 @@ const skills = [
 ];
 
 const Skills = () => {
+    const titleRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                const spans = titleRef.current.querySelectorAll('span');
+                if (entry.isIntersecting) {
+                    spans.forEach((span, i) => {
+                        span.style.animation = 'none';
+                        // Reflow tetiklenerek animasyon sıfırlanır
+                        void span.offsetWidth;
+                        span.style.animation = `letterFade 0.4s forwards`;
+                        span.style.animationDelay = `${i * 0.05}s`;
+                    });
+                }
+            },
+            { threshold: 0.6 }
+        );
+
+        if (titleRef.current) {
+            observer.observe(titleRef.current);
+        }
+
+        return () => {
+            if (titleRef.current) {
+                observer.unobserve(titleRef.current);
+            }
+        };
+    }, []);
+
     return (
         <section id="skills" className="skills-section">
-            <h2 className="skills-title animated-title">
+            <h2 className="skills-title animated-title" ref={titleRef}>
                 {'Neler Yapabilirim?'.split('').map((char, index) => (
-                    <span key={index} style={{ animationDelay: `${index * 0.05}s` }}>
+                    <span key={index}>
                         {char === ' ' ? '\u00A0' : char}
                     </span>
                 ))}
@@ -25,11 +55,11 @@ const Skills = () => {
                 {skills.map((skill, index) => (
                     <a
                         href={skill.url}
-                        target="_blank" // Yeni sekmede açılması için
-                        rel="noopener noreferrer" // Güvenlik için önerilir
-                        className="skill-card-link" // Stil vermek için bir sınıf ekledik
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="skill-card-link"
                         key={index}
-                        style={{ textDecoration: 'none', color: 'inherit' }} // Link stilini kaldırmak ve rengi korumak için
+                        style={{ textDecoration: 'none', color: 'inherit' }}
                     >
                         <div className="skill-card">
                             <img

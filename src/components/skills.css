@@ -16,9 +16,11 @@
 .skills-title {
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #e5e8ff; /* Açık ve okunabilir başlık */
+    color: #e5e8ff;
     position: relative;
+    opacity: 1 !important;  /* Kesin görünürlük için */
 }
+
 
 .skills-title::after {
     content: '';
@@ -110,4 +112,6 @@
         transform: translateY(0);
     }
 }
+
+
 

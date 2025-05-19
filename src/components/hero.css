@@ -150,6 +150,74 @@
     .hero-subtext {
         font-size: 1rem;
     }
+
+    .hero-button-group {
+        gap: 0.7rem;
+    }
+
+    .hero-cta-multiple {
+        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
+        min-width: 70px;
+    }
+
+    .hero-cta-more {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.5rem;
+    }
+}
+
+/* Yeni eklenen küçük ekran (480px altı) için responsive */
+
+@media screen and (max-width: 480px) {
+    .hero {
+        padding: 6em 1rem;
+        min-height: auto;
+    }
+
+    .animated-title {
+        font-size: 1.6rem;
+        letter-spacing: 0.5px;
+        white-space: normal;
+        line-height: 1.2;
+        padding: 0 0.5rem;
+    }
+
+    .hero-subtext {
+        font-size: 0.9rem;
+        max-width: 90vw;
+        padding: 0 0.5rem;
+    }
+
+    .hero-button-group {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: center;
+    }
+
+    .hero-cta-multiple {
+        width: 100%;
+        min-width: unset;
+        font-size: 0.85rem;
+        padding: 0.5rem 0;
+    }
+
+    .hero-cta-more {
+        width: 100%;
+        font-size: 0.95rem;
+        padding: 0.7rem 0;
+    }
+
+    .scroll-indicator {
+        bottom: 2rem;
+        width: 20px;
+        height: 35px;
+    }
+
+    .scroll-text {
+        bottom: 0.5rem;
+        font-size: 0.75rem;
+    }
 }
 
 /* --- Butonlar ve eklemeler --- */
@@ -203,21 +271,3 @@
 .hero-cta-more:hover {
     background: linear-gradient(45deg, #7b00ff, #ec4899);
 }
-
-/* Responsive için küçültme */
-
-@media screen and (max-width: 768px) {
-    .hero-button-group {
-        gap: 0.7rem;
-    }
-    .hero-cta-multiple {
-        font-size: 0.8rem;
-        padding: 0.4rem 1rem;
-        min-width: 70px;
-    }
-    .hero-cta-more {
-        font-size: 0.9rem;
-        padding: 0.6rem 1.5rem;
-    }
-}
-

@@ -2,13 +2,13 @@ import React, { useEffect, useRef } from 'react';
 import './skills.css';
 
 const skills = [
-    { name: 'Java', level: 'İleri Düzey', icon: '/icons/java-logo.png', url: 'https://www.oracle.com/java/' },
-    { name: 'JavaScript', level: 'İleri Düzey', icon: '/icons/js-logo.png', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
-    { name: 'C#', level: 'Orta Seviye', icon: '/icons/csharp-logo.png', url: 'https://learn.microsoft.com/en-us/dotnet/csharp/' },
-    { name: 'HTML5', level: 'İleri Düzey', icon: '/icons/html-logo.png', url: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
-    { name: 'CSS3', level: 'İleri Düzey', icon: '/icons/css-logo.png', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
-    { name: 'Python', level: 'Orta Seviye', icon: '/icons/python-logo.png', url: 'https://www.python.org/' },
-    { name: 'React.js', level: 'İleri Düzey', icon: '/icons/react-logo.png', url: 'https://react.dev/' },
+    { name: 'Java', level: 'Orta Seviye', icon: '/icons/java-logo.png', url: 'https://www.oracle.com/java/' },
+    { name: 'JavaScript', level: 'Orta Seviye', icon: '/icons/js-logo.png', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
+    { name: 'C#', level: 'İleri Düzey', icon: '/icons/csharp-logo.png', url: 'https://learn.microsoft.com/en-us/dotnet/csharp/' },
+    { name: 'HTML5', level: 'Orta Seviye', icon: '/icons/html-logo.png', url: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
+    { name: 'CSS3', level: 'Orta Seviye', icon: '/icons/css-logo.png', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
+    { name: 'Python', level: 'İleri Düzey', icon: '/icons/python-logo.png', url: 'https://www.python.org/' },
+    { name: 'React.js', level: 'Orta Seviye', icon: '/icons/react-logo.png', url: 'https://react.dev/' },
 ];
 
 const Skills = () => {
